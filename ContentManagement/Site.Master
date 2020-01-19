@@ -10,9 +10,9 @@
     <title><%: Page.Title %> – мое приложение ASP.NET</title>
 
     <asp:PlaceHolder runat="server">
-        <%: Scripts.Render("~/bundles/modernizr") %>
 
-        <%: ContentManagement.ScriptLink.Render("/Scripts/WebForms/MsAjax/MicrosoftAjax.js") %>
+        <%: Scripts.Render("~/bundles/modernizr") %>
+        <%: HttpContext.Current.IsDebuggingEnabled ? ContentManagement.ScriptLink.Render("/Scripts/Custom/CustomScript.js") : Scripts.Render("~/Scripts/Custom/CustomScript.js") %>
 
     </asp:PlaceHolder>
 

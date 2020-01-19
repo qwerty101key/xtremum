@@ -1,0 +1,1 @@
+﻿var testValue = 5;
